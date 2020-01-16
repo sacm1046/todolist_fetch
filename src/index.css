@@ -1,13 +1,62 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  background: rgb(243, 243, 243);
+}
+h1{
+  color:rgba(255, 0, 0, 0.5);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#table {
+  background: #fff;
+  padding: 30px;
+  position: relative;
+}
+
+#table,
+#table::before,
+#table::after {
+  /* Styles to distinguish sheets from one another */
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.25);
+  border: 1px solid #bbb;
+}
+
+#table::before,
+#table::after {
+  content: "";
+  position: absolute;
+  height: 95%;
+  width: 99%;
+  background-color: #eee;
+}
+
+#table::before {
+  right: 15px;
+  top: 0;
+  transform: rotate(-1deg);
+  z-index: -1;
+}
+
+#table::after {
+  top: 5px;
+  right: -5px;
+  transform: rotate(1deg);
+  z-index: -2;
+}
+
+i.fa-trash {
+  margin: 0px;
+}
+
+i {
+  height: 35px;
+  width: 0;
+  margin-right: 10px;
+  margin-left: -10px;
+  text-align: center;
+  display: inline-block;
+  color: white;
+  opacity: 0;
+  transition: .2s linear;
+}
+li:hover i {
+  opacity: 1.0;
 }
